@@ -4,14 +4,16 @@ public class Employee {
     private String department;
     private double salary;
     private String email;
+    private String phoneNumber;
     
     // Constructor
-    public Employee(int id, String name, String department, double salary, String email) {
+    public Employee(int id, String name, String department, double salary, String email, String phoneNumber) {
         this.id = id;
         this.name = name;
         this.department = department;
         this.salary = salary;
         this.email = email;
+        this.phoneNumber = phoneNumber;
     }
     
     // Getters
@@ -35,6 +37,10 @@ public class Employee {
         return email;
     }
     
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    
     // Setters
     public void setName(String name) {
         this.name = name;
@@ -52,6 +58,10 @@ public class Employee {
         this.email = email;
     }
     
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
     // Display employee details
     public void displayDetails() {
         System.out.println("ID: " + id);
@@ -59,6 +69,7 @@ public class Employee {
         System.out.println("Department: " + department);
         System.out.println("Salary: $" + salary);
         System.out.println("Email: " + email);
+        System.out.println("Phone: " + phoneNumber);
     }
     
     @Override
@@ -69,6 +80,7 @@ public class Employee {
                 ", department='" + department + '\'' +
                 ", salary=" + salary +
                 ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
 }
